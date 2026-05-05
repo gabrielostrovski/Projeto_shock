@@ -2,26 +2,62 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Login - Super Choque</title>
-    <link href="https://jsdelivr.net" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Super Shock</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body class="bg-dark text-light">
-
-    <div class="container d-flex justify-content-center align-items-center vh-100">
-        <div class="card p-4 bg-secondary text-white" style="width: 350px;">
-            <h2 class="text-center">Login</h2>
-            <hr>
-            <div class="mb-3">
-                <label>Usuário:</label>
-                <input type="text" id="usuario" class="form-control" placeholder="Digite admin">
+<body>
+    <div class="container-principal">
+        <div class="card-central">
+        
+            <div class="imagem-login">
+                <img src="assets/logo.png" alt="" class="imagem-topo-login">
             </div>
-            <div class="mb-3">
-                <label>Senha:</label>
-                <input type="password" id="senha" class="form-control" placeholder="Digite 1234">
+            
+            <div class="conteudo-card">
+                <h2 class="titulo-principal">Super Shock</h2>
+                <p class="subtitulo">O heroi mais eletrizante</p>
+                
+                <div class="abas">
+                    <button class="aba ativa" onclick="mostrarAba('login')">Entrar</button>
+                    <button class="aba" onclick="mostrarAba('cadastro')">Criar Conta</button>
+                </div>
+                
+                <div id="formLogin" class="formulario-aba ativo">
+                    <form id="loginForm">
+                        <div class="campo-form">
+                            <label>Usuario</label>
+                            <input type="text" id="loginUsuario" class="input-text" required>
+                        </div>
+                        <div class="campo-form">
+                            <label>Senha</label>
+                            <input type="password" id="loginSenha" class="input-text" required>
+                        </div>
+                        <div id="loginMensagem" class="mensagem erro d-none"></div>
+                        <button type="submit" class="botao-principal">Entrar</button>
+                    </form>
+                </div>
+                
+                <div id="formCadastro" class="formulario-aba">
+                    <form id="cadastroForm">
+                        <div class="campo-form">
+                            <label>Usuario</label>
+                            <input type="text" id="novoUsuario" class="input-text" required>
+                        </div>
+                        <div class="campo-form">
+                            <label>Senha</label>
+                            <input type="password" id="novaSenha" class="input-text" required>
+                        </div>
+                        <div class="campo-form">
+                            <label>Confirmar Senha</label>
+                            <input type="password" id="confirmarSenha" class="input-text" required>
+                        </div>
+                        <div id="cadastroMensagem" class="mensagem erro d-none"></div>
+                        <button type="submit" class="botao-principal">Criar Conta</button>
+                    </form>
+                </div>
             </div>
-            <button onclick="logar()" class="btn btn-warning w-100">Entrar</button>
-            <p id="mensagem" class="text-danger mt-3 text-center"></p>
         </div>
     </div>
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Shock - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <nav class="menu-navegacao">
+        <div class="container-menu">
+            <a href="home.html" class="logo">Super Shock</a>
+            <ul class="menu-links">
+                <li><a href="home.html" class="ativo">Home</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="login.html" id="sairLink">Sair</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-principal">
+        <div class="card">
+            <div class="card-conteudo">
+                <h1>Super Shock</h1>
+                <p class="mensagem-boas-vindas">Bem-vindo, <span id="nomeUsuario"></span>!</p>
+                
+                <div class="foto-principal-home">
+                    <img src="assets/Static Shock.jpg" alt="" class="imagem-home">
+                </div>
+                
+                <hr>
+                <p>Super Shock e um heroi que ganhou poderes eletricos apos um acidente em um laboratorio. Agora ele protege a cidade usando seus incriveis poderes de controlar eletricidade!</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-conteudo">
+                <h2>Poderes e Habilidades</h2>
+                <ul class="lista-poderes">
+                    <li>Controle de eletricidade</li>
+                    <li>Velocidade sobre-humana</li>
+                    <li>Campo de forca eletrico</li>
+                    <li>Pode absorver energia</li>
+                    <li>Inteligencia genial</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const usuarioLogado = localStorage.getItem('usuarioLogado');
+        if (!usuarioLogado) {
+            window.location.href = 'login.html';
+        }
+        
+        document.getElementById('nomeUsuario').textContent = usuarioLogado;
+        
+        document.getElementById('sairLink').addEventListener('click', function(e) {
+            e.preventDefault();
+            localStorage.removeItem('usuarioLogado');
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>
