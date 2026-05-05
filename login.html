@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 </head>
+
 <body>
     <div class="container-principal">
         <div class="card-central">
-        
+
             <div class="imagem-login">
                 <img src="assets/logo.png" alt="" class="imagem-topo-login">
             </div>
-            
+
             <div class="conteudo-card">
                 <h2 class="titulo-principal">Super Shock</h2>
                 <p class="subtitulo">O heroi mais eletrizante</p>
-                
+
                 <div class="abas">
                     <button class="aba ativa" onclick="mostrarAba('login')">Entrar</button>
                     <button class="aba" onclick="mostrarAba('cadastro')">Criar Conta</button>
                 </div>
-                
+
                 <div id="formLogin" class="formulario-aba ativo">
                     <form id="loginForm">
                         <div class="campo-form">
@@ -38,7 +40,7 @@
                         <button type="submit" class="botao-principal">Entrar</button>
                     </form>
                 </div>
-                
+
                 <div id="formCadastro" class="formulario-aba">
                     <form id="cadastroForm">
                         <div class="campo-form">
@@ -63,4 +65,5 @@
 
     <script src="scripts/login.js"></script>
 </body>
+
 </html>
