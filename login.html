@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Super Choque</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="bg-dark text-light">
+
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4 bg-secondary text-white" style="width: 350px;">
+            <h2 class="text-center">Login</h2>
+            <hr>
+            <div class="mb-3">
+                <label>Usuário:</label>
+                <input type="text" id="usuario" class="form-control" placeholder="Digite admin">
+            </div>
+            <div class="mb-3">
+                <label>Senha:</label>
+                <input type="password" id="senha" class="form-control" placeholder="Digite 1234">
+            </div>
+            <button onclick="logar()" class="btn btn-warning w-100">Entrar</button>
+            <p id="mensagem" class="text-danger mt-3 text-center"></p>
+        </div>
+    </div>
+
+    <script src="scripts/login.js"></script>
+</body>
+</html>
